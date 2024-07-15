@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiffin Service</title>
+    <link rel="stylesheet" href="tiffinstyles.css">
+</head>
+<body>
+    <div class="container">
+        <div id="auth-section">
+            <h2 id="auth-title">Login</h2>
+            <input type="email" id="email" placeholder="Email">
+            <input type="password" id="password" placeholder="Password">
+            <button id="auth-button" onclick="handleAuth()">Login</button>
+            <button onclick="toggleAuth()">Switch to Register</button>
+        </div>
+
+        <div id="main-section" style="display: none;">
+            <h1>Welcome to Tiffin Service</h1>
+
+            <div id="menu-section">
+                <h2>Menu</h2>
+                <div id="menu-list" class="card-container"></div>
+            </div>
+
+            <div id="cart-section">
+                <h2>Cart</h2>
+                <div id="cart-list"></div>
+                <button class="primary-button" onclick="placeOrder()">Place Order</button>
+            </div>
+
+            <div id="reviews-section">
+                <h2>Reviews</h2>
+                <ul id="reviews-list"></ul>
+                <textarea id="new-review" placeholder="Write a review"></textarea>
+                <div id="star-rating" class="star-rating">
+                    <span class="star" data-value="1">&#9733;</span>
+                    <span class="star" data-value="2">&#9733;</span>
+                    <span class="star" data-value="3">&#9733;</span>
+                    <span class="star" data-value="4">&#9733;</span>
+                    <span class="star" data-value="5">&#9733;</span>
+                </div>
+                <button class="primary-button" onclick="submitReview()">Submit Review</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="tiffinscript.js"></script>
+</body>
+</html>
